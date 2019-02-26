@@ -1,0 +1,29 @@
+select atriBUTOS.id,atrIBUTOS.data,atrIBUTOS.prazot,ideNTI.sigla as IDENTI,codBDI.nome as CODBDI,espeCI.sigla as ESPECI,modREF.moeda as MOEDA,indOPC.sigla as INDOPC,tpmeRC.sigla as TPMERC,acoES.nome as ACOES from atributOS join identi,codbDI,espeCI,modREF,indoPC,tpmeRC,acoes on atrIBUTOS.id_identi = ideNTI.id and atriBUTOS.id_codbdi = codBDI.id and atriBUTOS.id_especi = espeCI.id and atrIBUTOS.id_modref = modREF.id and atrIBUTOS.id_indopc = indOPC.id and atrIBUTOS.id_tpmerc = tpmeRC.id and atributos.id_acao = acoeS.id;
+
+select atriBUTOS.id,atrIBUTOS.data,atrIBUTOS.prazot,atrIBUTOS.preabe,ideNTI.sigla as IDENTI,codBDI.nome as CODBDI,espeCI.sigla as ESPECI,modREF.moeda as MOEDA,indOPC.sigla as INDOPC,tpmeRC.sigla as TPMERC,acoES.nome as ACOES from atributOS 
+join identi on atrIBUTOS.id_identi = ideNTI.id
+join codbDI on atriBUTOS.id_codbdi = codBDI.id
+join espeCI on atriBUTOS.id_especi = espeCI.id
+join modREF on atrIBUTOS.id_modref = modREF.id
+join indoPC on atrIBUTOS.id_indopc = indOPC.id
+join tpmeRC on atrIBUTOS.id_tpmerc = tpmeRC.id
+join acoes on atributos.id_acao = acoeS.id
+
+
+select ATRIBUTOS.*, ideNTI.sigla,codBDI.nome,espeCI.sigla,modREF.moeda, tpmeRC.sigla,acoES.sigla,acoES.nome from ATRIBUTOS
+join IDENTI on ATRIBUTOS.id_identi = IDENTI.id
+join CODBDI on ATRIBUTOS.id_codbdi = CODBDI.id
+join espeCI on atriBUTOS.id_especi = espeCI.id
+join modREF on atrIBUTOS.id_modref = modREF.id
+--join indoPC on atrIBUTOS.id_indopc = indOPC.id
+join tpmeRC on atrIBUTOS.id_tpmerc = tpmeRC.id
+join acoes on atributos.id_acao = acoeS.id
+
+select ATRIBUTOS.data,atriBUTOS.prazot,atrIBUTOS.preabe,atriBUTOS.premax,atribuTOS.premin,atriBUTOS.premed,atribUTOS.preult, atriBUTOS.quatot, ideNTI.sigla,codBDI.nome,espeCI.sigla,modREF.moeda,tpmeRC.sigla,acoES.sigla,acoES.nome from ATRIBUTOS
+join IDENTI on ATRIBUTOS.id_identi = IDENTI.id
+join CODBDI on ATRIBUTOS.id_codbdi = CODBDI.id
+join espeCI on atriBUTOS.id_especi = espeCI.id
+join modREF on atrIBUTOS.id_modref = modREF.id
+--join indoPC on atrIBUTOS.id_indopc = indOPC.id
+join tpmeRC on atrIBUTOS.id_tpmerc = tpmeRC.id
+join acoes on atributos.id_acao = acoeS.id
